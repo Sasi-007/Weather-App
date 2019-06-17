@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: : border-box;
+  box-sizing: border-box;
 }
 
 body{
@@ -10,7 +10,7 @@ body{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  background: linear-gradient (rgb(47, 150, 163), rgb(48, 62, 143));
   font-family: sans-serif;
   color: white;
 }
