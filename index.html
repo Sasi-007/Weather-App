@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" >
-    <title>Weather</title>
-    <link href="./assets/style.css" rel="stylesheet" type="css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather API</title>
+    <link href="style.css" rel="stylesheet" type="css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <script src="script.js"></script>
     <script src="skycons.js"></script>
     <script src="jquery-3.4.1.js"></script>
   </head>
   <body>
-
-    <div class="location">
-      <h1 class="location-timezone">Timezone</h1>
-      <canvas class="icon" width="128" height="128"></canvas>
-    </div>
-    <div class="temperature">
-        <div class="degree-section">
-      <h2 class="temperature-degree">34</h2>
-        <span>F</span>
+    <div class="container">
+      <div class="weather-box">
+        <div class="row1">
+          <h2 class="weather-location"></h2>
+          <canvas class="weatherType" id="icon1" width="128" height="128"></canvas>
         </div>
-      <div class="temperature-description">Its friggin cold</div>
+        <div class="row2">
+          <h1 class="temp"></h1>
+          <span class="temp-type">°C</span>
+        </div>
+        <h2 class="weather-description"></h2>
+        <p class="modified-by">Modified by Arianne Ghislaine Rull</p>
+      </div>
     </div>
-
-
   </body>
 </html>
