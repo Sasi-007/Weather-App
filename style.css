@@ -1,44 +1,111 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  padding: 0px;
+  margin: 0px;
 }
-
-body{
+.container{
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#311847), to(#3EB9E6));
+  background-image: -webkit-linear-gradient(top, #311847, #3EB9E6);
+  background-image: -moz-linear-gradient(top, #311847, #3EB9E6);
+  background-image: linear-gradient(to bottom, #311847, #3EB9E6);
+}
+.weather-box{
+  height: 100%;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient (rgb(47, 150, 163), rgb(48, 62, 143));
-  font-family: sans-serif;
-  color: white;
+  justify-content: center;
+  position: relative;
+  font-family: 'Abel', sans-serif;
+  animation-name: introduction;
+  animation-duration: 7s;
 }
-
-.location,
-.temperature {
-  height: 300vh;
+.row1{
   width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
 }
-
-.temperature{
-  flex-direction: column;
+.weather-location{
+  color: white;
+  font-size: 50px;
 }
-
-.degree-section{
+.weather-icon{
+  width: 100px;
+}
+.row2{
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin-top: 50px;
+}
+.row2:hover .temp{
+  color: #41A5CF;
+}
+.row2:hover .temp-type{
+  color: white;
+}
+.temp{
+  color: white;
+  font-size: 88px;
   cursor: pointer;
+  pointer-events: auto;
+  transition: color 1s;
 }
-
-.degree-section span{
-  margin: 10px;
-  font-size: 30px;
+.weather-description{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  width: 50%;
 }
-
-.degree-section h2{
-  font-size: 40px;
+.block1, .block2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.made-by{
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  right:
+}
+@@keyframes introduction {
+  0%{
+    bottom: -320px;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .row1{
+    flex-direction: column;
+  }
+  .weather-location{
+    font-size: 30px;
+  }
+  .made-by{
+    display: none;
+  }
+  .block1{
+    padding: 20px;
+  }
+  .block2{
+    padding: 20px;
+  }
+  .weather-days{
+    font-size: 16px;
+  }
+  .container{
+    height: 130vh;
+  }
 }
